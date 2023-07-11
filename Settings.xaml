@@ -1,0 +1,71 @@
+<Window x:Class="Alchemist.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alchemist"
+        mc:Ignorable="d"
+
+        Title="Settings" Height="500" Width="800" MinHeight="500" MinWidth="800">
+
+    <!-- Подключение файлов ресурсов вилимо не судьба
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Alchemist;component/Properties/EnResource.resx"/>
+                <ResourceDictionary Source="/Alchemist;component/Properties/UkResource.resx"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
+
+    <Grid>
+        <!-- фон градиентом -->
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF010102" Offset="0"/>
+                <GradientStop Color="#FF2C2C34" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- 6 рядов -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 4 столбца -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Settings -->
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Margin="100,30,100,0" FontSize="48" FontWeight="Bold" Foreground="LightGray" TextAlignment="Center" Text="Settings"/>
+
+        <!-- Language -->
+        <TextBlock Grid.Row="1" Grid.Column="1" Foreground="LightGray" FontSize="25" Text="Language"/>
+
+        <ComboBox Grid.Column="2" Grid.Row="1" Margin="40,5,40,30">
+            <Button Name="Eenglish" Content="Eenglish"/>
+            <Button Name="Українська" Content="Українська"/>
+        </ComboBox>
+
+        <!-- Sound -->
+        <RadioButton Content="Sound" Grid.Row="2" Grid.Column="1" Foreground="LightGray" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Slider Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Height="8" Margin="10,22,0,10" Width="150" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" Foreground="LightGray" FontSize="25" Text="Screen resolution"/>
+        <ComboBox Grid.Row="3" Grid.Column="2" Margin="40,5,40,30">
+            <Button Name="one" Content="16:9"/>
+            <Button Name="two" Content="4:3"/>
+            <Button Name="three" Content="2:1"/>
+        </ComboBox>
+        
+    </Grid>
+</Window>   
