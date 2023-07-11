@@ -1,0 +1,47 @@
+<Window x:Class="Alchemist.Resume"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alchemist"
+        mc:Ignorable="d"
+        Title="Resume" Height="500" Width="800" MinHeight="500" MinWidth="800">
+    <Grid>
+        <!-- 2 ряда -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.6*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 3 столбца -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- фон градиентом -->
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF010102" Offset="0"/>
+                <GradientStop Color="#FF2C2C34" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBlock Grid.ColumnSpan="2" FontSize="16" Margin="10,10,0,0" Foreground="#FFC8CDD2" TextWrapping="Wrap"  VerticalAlignment="Top" 
+                   Text="Алхимия - это древнейшая наука.
+                   &#x0a;Наши предки считали, что с помощью алхимических знаний &#x0a;можно создать философский камень и обрести бессмертие. 
+                   &#x0a;Но к сожалению, всё оказалось совсем не так, зато алхимия &#x0a;дала жизнь многим современным наукам. 
+                   &#x0a;Сейчас вам посчастливится столкнуться с этой невероятной наукой на практике."/>
+
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Margin="10" FontSize="16" Foreground="#FFC8CDD2" TextWrapping="Wrap"  VerticalAlignment="Top" 
+                   Text="В игре 'Алхимия', вы будете создавать всё живое на планете используя всего лишь четыре элемента. 
+                   &#x0a;Ими будут элементы стихий: земля, вода, огонь и воздух. 
+                   &#x0a;&#x0a;Вы должны комбинировать их между собой, чтобы создавать новые элементы, которые помогут сотворить мир таким, каким мы видим его сейчас. 
+                   &#x0a;Чтобы скомбинировать элементы вам нужно поместить их в магический круг. &#x0a;Если они сходятся, то вы получаете новых существ или растения. 
+                   &#x0a;&#x0a;В правом верхнем углу будет сидеть маленький алхимик и давать вам подсказки. &#x0a;&#x0a;Приятной игры!"/>
+
+        <Image Grid.Column="2"  Source="/905bb1470835f1122c34cf11fdc1b231--book-jacket-fullmetal-alchemist.jpg" Stretch="Fill"/>
+
+    </Grid>
+</Window>
